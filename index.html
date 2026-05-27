@@ -559,21 +559,29 @@
     }
 
     .nav-logo-icon {
-      width: 42px;
-      height: 42px;
-      background: linear-gradient(135deg, var(--blue-500), var(--teal-500));
-      border-radius: 12px;
+      width: 56px;
+      height: 56px;
+      background: var(--white);
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
-      color: var(--white);
       flex-shrink: 0;
+      overflow: hidden;
+      padding: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       transition: transform var(--duration-fast) var(--ease-smooth);
     }
 
+    .nav-logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
     .nav-logo:hover .nav-logo-icon {
-      transform: rotate(-5deg) scale(1.05);
+      transform: rotate(-3deg) scale(1.05);
     }
 
     .nav-logo-text {
@@ -1989,7 +1997,9 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#" class="nav-logo">
-        <div class="nav-logo-icon">🦷</div>
+        <div class="nav-logo-icon">
+          <img src="images/logo.jpg" alt="Dental Salud CR" />
+        </div>
         <span class="nav-logo-text">
           <span class="brand">Dental Salud CR</span>
           <span class="brand-sub">Tu sonrisa, nuestra pasión</span>
@@ -2385,7 +2395,9 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="nav-logo">
-            <div class="nav-logo-icon">🦷</div>
+            <div class="nav-logo-icon">
+              <img src="images/logo.jpg" alt="Dental Salud CR" />
+            </div>
             <span class="nav-logo-text">
               <span class="brand">Dental Salud CR</span>
               <span class="brand-sub">Tu sonrisa, nuestra pasión</span>
