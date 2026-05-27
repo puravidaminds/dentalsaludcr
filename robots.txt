@@ -1,0 +1,5 @@
+# Robots.txt for Dental Salud CR
+User-agent: *
+Allow: /
+
+Sitemap: https://puravidaminds.github.io/dentalsaludcr/sitemap.xml
