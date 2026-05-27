@@ -460,6 +460,14 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
+    .nav-link.active {
+      color: var(--white);
+    }
+
+    .navbar.scrolled .nav-link.active {
+      color: var(--blue-600);
+    }
+
     .nav-link:hover::after { transform: scaleX(1); }
 
     .navbar.scrolled .nav-link {
@@ -1124,7 +1132,6 @@
       background: linear-gradient(160deg, var(--blue-100), var(--teal-100));
       transition: all var(--duration-base) var(--ease-smooth);
       cursor: pointer;
-      group: true;
     }
 
     .gallery-item img {
@@ -1794,7 +1801,7 @@
   <!-- ===== LIGHTBOX ===== -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
-    <img id="lightboxImage" src="" alt="Imagen ampliada" />
+    <img id="lightboxImage" src="" alt="Imagen ampliada" loading="lazy" />
   </div>
 
   <!-- ===== SKIP LINK ===== -->
@@ -2347,13 +2354,6 @@
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
           link.classList.add('active');
-          if (navbar.classList.contains('scrolled')) {
-            link.style.color = 'var(--blue-600)';
-          } else {
-            link.style.color = 'var(--white)';
-          }
-        } else {
-          link.style.color = '';
         }
       });
     });
@@ -2364,12 +2364,23 @@
     const lightboxClose = document.getElementById('lightboxClose');
 
     document.querySelectorAll('.gallery-item').forEach(item => {
-      item.addEventListener('click', () => {
+      item.setAttribute('role', 'button');
+      item.setAttribute('tabindex', '0');
+
+      function openGalleryImage() {
         const src = item.getAttribute('data-src') || item.querySelector('img')?.src;
         if (src) {
           lightboxImage.src = src;
           lightbox.classList.add('active');
           document.body.style.overflow = 'hidden';
+        }
+      }
+
+      item.addEventListener('click', openGalleryImage);
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openGalleryImage();
         }
       });
     });
@@ -2399,8 +2410,13 @@
       }
     });
 
-    scrollTopBtn.addEventListener('click', () => {
+    function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    scrollTopBtn.addEventListener('click', scrollToTop);
+    scrollTopBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') scrollToTop();
     });
 
     // ===== SMOOTH SCROLL FOR ALL ANCHORS =====
