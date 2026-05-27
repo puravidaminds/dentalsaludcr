@@ -34,8 +34,6 @@
   <meta property="og:title" content="Dental Salud CR — Odontología en San Juan de Tibás | Costa Rica" />
   <meta property="og:description" content="Clínica dental en San Juan de Tibás, Costa Rica. Ortodoncia, estética dental, endodoncia, implantes y más. Agenda tu cita hoy." />
   <meta property="og:image" content="https://puravidaminds.github.io/dentalsaludcr/images/photo-0.jpg" />
-  <meta property="og:image:width" content="958" />
-  <meta property="og:image:height" content="959" />
   <meta property="og:image:alt" content="Dental Salud CR — Clínica dental en San Juan de Tibás, Costa Rica" />
   <meta property="og:site_name" content="Dental Salud CR" />
   <meta property="og:locale" content="es_CR" />
@@ -51,152 +49,147 @@
 
   <meta name="theme-color" content="#0a5eb0" />
 
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🦷</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- JSON-LD Structured Data for SEO -->
+  <!-- JSON-LD Structured Data for SEO (Dentist + FAQ + LocalBusiness) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Dentist",
-    "@id": "https://puravidaminds.github.io/dentalsaludcr/",
-    "name": "Dental Salud CR",
-    "description": "Clínica dental en San Juan de Tibás, Costa Rica. Especialistas en ortodoncia, estética dental, endodoncia, implantes y odontología general.",
-    "url": "https://puravidaminds.github.io/dentalsaludcr/",
-    "telephone": "+50672328638",
-    "email": "dentalsaludcr@gmail.com",
-    "image": "https://puravidaminds.github.io/dentalsaludcr/images/photo-0.jpg",
-    "priceRange": "$$",
-    "openingHoursSpecification": [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
+        "@type": "Dentist",
+        "@id": "https://puravidaminds.github.io/dentalsaludcr/",
+        "name": "Dental Salud CR",
+        "description": "Clínica dental en San Juan de Tibás, Costa Rica. Especialistas en ortodoncia, estética dental, endodoncia, implantes y odontología general.",
+        "url": "https://puravidaminds.github.io/dentalsaludcr/",
+        "telephone": "+50672328638",
+        "email": "dentalsaludcr@gmail.com",
+        "image": "https://puravidaminds.github.io/dentalsaludcr/images/photo-0.jpg",
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "13:00"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "50 m oeste del Rostipollo de la Florida",
+          "addressLocality": "San Juan de Tibás",
+          "addressRegion": "San José",
+          "addressCountry": "CR"
+        },
+        "sameAs": [
+          "https://www.facebook.com/dentalsaludcr",
+          "https://www.instagram.com/dentalsaludcr/"
+        ],
+        "knowsAbout": [
+          "Ortodoncia",
+          "Estética Dental",
+          "Endodoncia",
+          "Odontología General",
+          "Periodoncia",
+          "Implantes Dentales"
+        ]
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "13:00"
-      }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "50 m oeste del Rostipollo de la Florida",
-      "addressLocality": "San Juan de Tibás",
-      "addressRegion": "San José",
-      "addressCountry": "CR"
-    },
-    "sameAs": [
-      "https://www.facebook.com/dentalsaludcr",
-      "https://www.instagram.com/dentalsaludcr/"
-    ],
-    "knowsAbout": [
-      "Ortodoncia",
-      "Estética Dental",
-      "Endodoncia",
-      "Odontología General",
-      "Periodoncia",
-      "Implantes Dentales"
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Dónde está ubicada Dental Salud CR?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Estamos ubicados en San Juan de Tibás, Costa Rica, 50 metros al oeste del Rostipollo de la Florida de Tibás."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Dónde está ubicada Dental Salud CR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Estamos ubicados en San Juan de Tibás, Costa Rica, 50 metros al oeste del Rostipollo de la Florida de Tibás."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuáles son los horarios de atención?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Atención de lunes a viernes de 9:00 a.m. a 6:00 p.m. y sábados de 9:00 a.m. a 1:00 p.m."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué servicios dentales ofrecen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ofrecemos ortodoncia (brackets), estética dental, endodoncia (conductos), odontología general, periodoncia e implantes dentales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo puedo agendar una cita?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes agendar tu cita llamando al +506 7232-8638 o enviándonos un mensaje por WhatsApp al mismo número."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hacen blanqueamiento dental?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, realizamos blanqueamiento dental profesional y otros tratamientos de estética dental como carillas y resinas."
+            }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "¿Cuáles son los horarios de atención?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Atención de lunes a viernes de 9:00 a.m. a 6:00 p.m. y sábados de 9:00 a.m. a 1:00 p.m."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué servicios dentales ofrecen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ofrecemos ortodoncia (brackets), estética dental, endodoncia (conductos), odontología general, periodoncia e implantes dentales."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo puedo agendar una cita?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Puedes agendar tu cita llamando al +506 7232-8638 o enviándonos un mensaje por WhatsApp al mismo número."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Hacen blanqueamiento dental?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí, realizamos blanqueamiento dental profesional y otros tratamientos de estética dental como carillas y resinas."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD LocalBusiness Schema with Reviews -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://puravidaminds.github.io/dentalsaludcr/#business",
-    "name": "Dental Salud CR",
-    "description": "Clínica dental en San Juan de Tibás, Costa Rica. Especialistas en ortodoncia, estética dental, endodoncia, implantes y odontología general.",
-    "image": "https://puravidaminds.github.io/dentalsaludcr/images/photo-0.jpg",
-    "telephone": "+50672328638",
-    "email": "dentalsaludcr@gmail.com",
-    "url": "https://puravidaminds.github.io/dentalsaludcr/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "50 m oeste del Rostipollo de la Florida",
-      "addressLocality": "San Juan de Tibás",
-      "addressRegion": "San José",
-      "addressCountry": "CR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 9.8617775,
-      "longitude": -84.0984496
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "María Rodríguez" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Excelente atención, muy profesionales y cálidos. Me hicieron sentir cómodo durante todo el tratamiento. Los recomiendo al 100%."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Carlos Pérez" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Desde que empecé mi tratamiento de brackets noté el cambio. El equipo es súper atento y siempre resuelven todas mis dudas."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Andrea López" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Me hicieron un blanqueamiento dental y el resultado fue increíble. Instalaciones muy lindas y el trato es de primera."
+        "@type": "LocalBusiness",
+        "@id": "https://puravidaminds.github.io/dentalsaludcr/#business",
+        "name": "Dental Salud CR",
+        "description": "Clínica dental en San Juan de Tibás, Costa Rica. Especialistas en ortodoncia, estética dental, endodoncia, implantes y odontología general.",
+        "image": "https://puravidaminds.github.io/dentalsaludcr/images/photo-0.jpg",
+        "telephone": "+50672328638",
+        "email": "dentalsaludcr@gmail.com",
+        "url": "https://puravidaminds.github.io/dentalsaludcr/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "50 m oeste del Rostipollo de la Florida",
+          "addressLocality": "San Juan de Tibás",
+          "addressRegion": "San José",
+          "addressCountry": "CR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 9.8617775,
+          "longitude": -84.0984496
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "María Rodríguez" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Excelente atención, muy profesionales y cálidos. Me hicieron sentir cómodo durante todo el tratamiento. Los recomiendo al 100%."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Carlos Pérez" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Desde que empecé mi tratamiento de brackets noté el cambio. El equipo es súper atento y siempre resuelven todas mis dudas."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Andrea López" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Me hicieron un blanqueamiento dental y el resultado fue increíble. Instalaciones muy lindas y el trato es de primera."
+          }
+        ]
       }
     ]
   }
